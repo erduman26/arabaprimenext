@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from "../img/logo.jpg";
 import { CiHome, CiShop, CiUser, CiReceipt, CiShoppingBasket, CiGrid41 } from "react-icons/ci";
-import { HiXMark } from "react-icons/hi2";
+import { HiXMark, HiOutlineShoppingBag  } from "react-icons/hi2";
 import AplicationModal from './AplicationModal';
 
 const Navbar = () => {
@@ -49,12 +49,12 @@ const Navbar = () => {
         <div className="flex justify-around py-2">
           <Link href="/" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
-            <CiHome className="w-7 h-7" />
+            <CiHome className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Ana Sayfa</span>
           </Link>
           <Link href="/urunler" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/urunler' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
-            <CiShop className="w-7 h-7" />
+            <CiShop className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Ürünler</span>
           </Link>
           <div className="flex relative flex-col items-center bottom-6 shadow-lg text-white">
@@ -64,15 +64,15 @@ const Navbar = () => {
               <CiGrid41 className="w-14 h-14 bg-red-500 rounded-lg" onClick={toggleModal} />
             )}
           </div>
-          <Link href="/paketler" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
-            {pathname === '/paketler' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
-            <CiReceipt className="w-7 h-7"/>
-            <span>Paketler</span>
+          <Link href="/sepetim" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
+            {pathname === '/sepetim' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
+            <HiOutlineShoppingBag className="w-7 h-7" style={{ strokeWidth: 1.5 }}/>
+            <span>Sepetim</span>
           </Link>
           <Link href="/uyegirisi" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/uyegirisi' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
-            <CiUser className="w-7 h-7"/>
-            <span>Üye/Giriş</span>
+            <CiUser className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
+            <span>Profilim</span>
           </Link>
         </div>
       </div>

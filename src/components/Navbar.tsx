@@ -48,12 +48,12 @@ const Navbar = () => {
       <div className="lg:hidden z-50 fixed bottom-0 left-0 right-0 rounded-t-3xl bg-white shadow-[0_-2px_2px_rgba(0,0,0,0.1)]">
         <div className="flex justify-around py-2">
           <Link href="/" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
-            {pathname === '/' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
+            {pathname === '/' && <span className='flex absolute text-7xl bottom-12 mb-0.5 text-red-500'>.</span>}
             <CiHome className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Anasayfa</span>
           </Link>
           <Link href="/urunler" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
-            {pathname === '/urunler' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
+            {pathname === '/urunler' && <span className='flex absolute text-7xl bottom-12 mb-0.5 text-red-500'>.</span>}
             <CiShop className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Ürünler</span>
           </Link>
@@ -65,12 +65,12 @@ const Navbar = () => {
             )}
           </div>
           <Link href="/sepetim" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
-            {pathname === '/sepetim' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
+            {pathname === '/sepetim' && <span className='flex absolute text-7xl bottom-12 mb-0.5 text-red-500'>.</span>}
             <HiOutlineShoppingBag className="w-7 h-7" style={{ strokeWidth: 1.5 }}/>
             <span>Sepetim</span>
           </Link>
           <Link href="/uyegirisi" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
-            {pathname === '/uyegirisi' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
+            {pathname === '/uyegirisi' && <span className='flex absolute text-7xl bottom-12 mb-0.5 text-red-500'>.</span>}
             <CiUser className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Profilim</span>
           </Link>

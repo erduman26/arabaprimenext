@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from "../img/logo.jpg";
 import { CiHome, CiShop, CiUser, CiReceipt, CiShoppingBasket, CiGrid41 } from "react-icons/ci";
-import { HiXMark, HiOutlineShoppingBag  } from "react-icons/hi2";
+import { HiXMark, HiOutlineShoppingBag, HiBars3BottomRight  } from "react-icons/hi2";
 import AplicationModal from './AplicationModal';
 
 const Navbar = () => {
@@ -36,12 +36,12 @@ const Navbar = () => {
           <Link href="/sikcasorulansorular" className={`text-gray-950 ${pathname === '/sikcasorulansorular' ? 'text-red-600' : ''}`}>Sss</Link>
           <Link href="/uyegirisi" className="text-red-600 border-2 border-red-600 py-1.5 px-6 rounded-xl">Üye Girişi</Link>
           <Link href="/basket" passHref>
-              <CiShoppingBasket className='w-10 h-10'/>
+              <HiOutlineShoppingBag className='w-10 h-10 text-gray-700'/>
           </Link>
         </div>
         <div className="lg:hidden items-center text-lg">
           <Link href="/basket" passHref>
-              <CiShoppingBasket className='w-10 h-10'/>
+              <HiBars3BottomRight className='w-10 h-10'/>
           </Link>
         </div>
       </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <Link href="/" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
             <CiHome className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
-            <span>Ana Sayfa</span>
+            <span>Anasayfa</span>
           </Link>
           <Link href="/urunler" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/urunler' && <span className='flex absolute text-7xl bottom-14 mb-0.5 text-red-500'>.</span>}
@@ -59,9 +59,9 @@ const Navbar = () => {
           </Link>
           <div className="flex relative flex-col items-center bottom-6 shadow-lg text-white">
             {isModalOpen ? (
-              <HiXMark className="w-14 h-14 bg-red-500 rounded-lg" onClick={toggleModal} />
+              <HiXMark className="w-14 h-14 bg-red-600 rounded-lg" onClick={toggleModal} />
             ) : (
-              <CiGrid41 className="w-14 h-14 bg-red-500 rounded-lg" onClick={toggleModal} />
+              <CiGrid41 className="w-14 h-14 bg-red-600 rounded-lg" onClick={toggleModal} />
             )}
           </div>
           <Link href="/sepetim" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">

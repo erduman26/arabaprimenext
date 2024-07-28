@@ -1,9 +1,9 @@
 import React from 'react';
 import { CiFilter, CiSearch } from "react-icons/ci";
 
-const Filters = () => {
+const MobileFilters = () => {
   return (
-    <div className="py-6 flex items-center justify-center rounded-lg space-x-2 md:hidden">
+    <div className="pt-6 pb-4 flex items-center justify-center rounded-lg space-x-2">
       <div className="relative w-full">
         <input 
           type="text" 
@@ -19,4 +19,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default MobileFilters;

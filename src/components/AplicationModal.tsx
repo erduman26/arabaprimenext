@@ -12,7 +12,7 @@ interface AplicationModalProps {
 
 const AplicationModal: React.FC<AplicationModalProps> = ({ isOpen, onClose }) => {
     const handleLinkClick = () => {
-      onClose(); // Link tıklandığında modalı kapat
+      onClose();
     };
 
   return (
@@ -23,9 +23,9 @@ const AplicationModal: React.FC<AplicationModalProps> = ({ isOpen, onClose }) =>
           animate={{ y: '15%' }}
           exit={{ y: '100%' }}
           transition={{ type: 'spring', stiffness: 250, damping: 20 }}
-          className="fixed inset-0 bg-gray-50 border rounded-t-xl border-gray-300 z-10 overflow-y-auto" // overflow-y-auto ekledik
+          className="fixed inset-0 bg-gray-50 border rounded-t-xl border-gray-300 z-10 overflow-y-auto"
         >
-          <div className="h-3/4 px-4 overflow-y-auto"> {/* overflow-y-auto ekledik */}
+          <div className="h-3/4 px-4 overflow-y-auto">
             <div className="mt-6">
               <span className="text-lg font-semibold block mb-4"></span>
               <ul className="space-y-4 font-semibold text-base">

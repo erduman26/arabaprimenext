@@ -6,6 +6,8 @@ const images = [
   '//www.otoaksesuar.com/Data/EditorFiles/BulbeniQR-Banner (1).png',
   '//otoaksesuar.com/Data/EditorFiles/Ana banner/Anabanner/1.%20Pick-Up-masa%C3%BCst%C3%BC1200x389.png',
   '//otoaksesuar.com/Data/EditorFiles/Ana banner/Anabanner/5. Krom-Aksesuar-masaüstü1200x389.png',
+  '//otoaksesuar.com/Data/EditorFiles/Ana%20banner/Anabanner/4.%20Tavan-%C3%9Cr%C3%BCnleri-masa%C3%BCst%C3%BC1200x389.png',
+  '//otoaksesuar.com/Data/EditorFiles/Ana%20banner/Anabanner/2.%20Yan-Basamak-masa%C3%BCst%C3%BC1200x389.png',
 ];
 
 const Carausel = () => {
@@ -22,7 +24,7 @@ const Carausel = () => {
   }, []);
 
   return (
-    <div className="relative mx-auto 2xl:mx-24  overflow-hidden lg:mb-8 rounded-lg">
+    <div className="relative mx-auto 2xl:mx-24 overflow-hidden lg:mb-8 rounded-lg">
       <div
         className="relative flex transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -32,7 +34,7 @@ const Carausel = () => {
             <img
               src={image}
               alt={`Slide ${index}`}
-              className="w-full h-full object-contain object-center"
+              className="w-full h-full object-cover object-center"
             />
           </div>
         ))}

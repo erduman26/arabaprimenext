@@ -3,7 +3,7 @@ import { CiFilter, CiSearch } from "react-icons/ci";
 
 const MobileFilters = () => {
   return (
-    <div className="pt-6 pb-4 flex items-center justify-center rounded-lg space-x-2">
+    <div className="pt-6 md:pt-0 lg:pt-6 pb-4 flex items-center justify-center rounded-lg space-x-2">
       <div className="relative w-full">
         <input 
           type="text" 

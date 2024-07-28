@@ -1,17 +1,18 @@
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import Filters from "./Filters";
+import MobileFilters from "./MobileFilters";
+import DesktopFilters from "./DesktopFilters";
 import Carausel from './Carausel';
 
 const Urunler = () => {
   return (
     <div className="my-16 md:my-24">
       <div className="mx-2 mb-4">
-        <div className="md:hidden">
-      <Filters />
+        <div className="lg:hidden">
+      <MobileFilters />
       </div>
       <Carausel />
-      <div className="hidden ">
-      <Filters />
+      <div className="hidden lg:block">
+      <DesktopFilters />
       </div>
       </div>
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 lg:gap-4 lg:px-4 2xl:px-24 px-2">

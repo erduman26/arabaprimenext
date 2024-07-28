@@ -17,11 +17,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-white shadow 2xl:px-20">
-      <div className="mx-auto px-4 py-4 flex items-center justify-between">
+    <nav className="fixed w-full z-50 bg-white shadow 2xl:px-24">
+      <div className="mx-auto px-2 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Image
-            className='w-11 rounded-full'
+            className='w-11 rounded-xl'
             src={Logo}
             alt="Arabaprime logo"
             draggable="false"

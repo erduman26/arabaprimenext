@@ -5,10 +5,10 @@ import Logo from "../img/logo.jpg";
 const Footer = () => {
   return (
     <div className="flex flex-col items-center justify-center shadow-[0_-2px_2px_rgba(0,0,0,0.1)]">   
-        <footer className="footer p-10 bg-white text-gray-950 shadow-top text-center ">
+        <footer className="p-10 bg-white text-gray-950 shadow-top text-center hidden lg:block">
             <aside className='select-none text-sm'>
                 <Image
-                    className='relative sm:w-24 sm:h-24 w-20 h-20 rounded-full mx-auto'
+                    className='relative sm:w-24 sm:h-24 w-20 h-20 rounded-3xl mx-auto'
                     src={Logo}
                     alt="tozlupetlogo"
                     draggable="false"

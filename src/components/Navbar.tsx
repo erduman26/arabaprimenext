@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from "../img/logo.jpg";
-import { CiHome, CiShop, CiUser, CiReceipt, CiShoppingBasket, CiGrid41 } from "react-icons/ci";
+import { CiHome, CiShop, CiUser, CiGrid41 } from "react-icons/ci";
 import { HiXMark, HiOutlineShoppingBag, HiBars3BottomRight  } from "react-icons/hi2";
 import AplicationModal from './AplicationModal';
 
@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link href="/bizeulasin" className={`text-gray-950 ${pathname === '/bizeulasin' ? 'text-red-600' : ''}`}>Bize Ulaşın</Link>
           <Link href="/sikcasorulansorular" className={`text-gray-950 ${pathname === '/sikcasorulansorular' ? 'text-red-600' : ''}`}>Sss</Link>
           <Link href="/uyegirisi" className="text-red-600 border-2 border-red-600 py-1.5 px-6 rounded-xl">Üye Girişi</Link>
-          <Link href="/basket" passHref>
+          <Link href="/sepetim" passHref>
               <HiOutlineShoppingBag className='w-10 h-10 text-gray-700'/>
           </Link>
         </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="lg:hidden z-50 fixed bottom-0 left-0 right-0 rounded-t-3xl bg-white shadow-[0_-2px_2px_rgba(0,0,0,0.1)]">
-        <div className="flex justify-around py-2">
+        <div className="flex justify-around py-1">
           <Link href="/" className="flex flex-col items-center justify-center text-gray-600 text-sm font-semibold">
             {pathname === '/' && <span className='flex absolute text-7xl bottom-12 mb-0.5 text-red-500'>.</span>}
             <CiHome className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <CiShop className="w-7 h-7" style={{ strokeWidth: 0.5 }}/>
             <span>Ürünler</span>
           </Link>
-          <div className="flex relative flex-col items-center bottom-6 shadow-lg text-white">
+          <div className="flex relative flex-col items-center bottom-4 shadow-lg text-white">
             {isModalOpen ? (
               <HiXMark className="w-14 h-14 bg-red-600 rounded-lg" onClick={toggleModal} />
             ) : (

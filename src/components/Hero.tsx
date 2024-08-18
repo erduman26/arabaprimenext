@@ -1,97 +1,30 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+import Banner from '../img/banner.png';
 import Image from 'next/image';
-import BannerOne from "../img/araba.jpg";
-import BannerFour from "../img/arababilgi.jpg";
-import BannerTwo from "../img/bannerbir.jpg";
-import BannerThree from "../img/bannerikinci.jpg";
 
 const Hero = () => {
-  // En üstteki slider için state ve görselleri ayarlama
-  const [mainCurrentIndex, setMainCurrentIndex] = useState(0);
-  const mainImages = [BannerOne, BannerFour];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setMainCurrentIndex((prevIndex) => (prevIndex + 1) % mainImages.length);
-    }, 7000); // 7 saniyede bir geçiş
-    return () => clearInterval(interval);
-  }, [mainImages.length]);
-
-  // Alttaki slider için state ve görselleri ayarlama
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [BannerTwo, BannerThree];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000); // 7 saniyede bir geçiş
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-start gap-3 lg:gap-4 mx-auto 2xl:mx-24 lg:mb-5 rounded-lg">
-      {/* En üstte tam genişlikte görsel slider */}
-      <div className="w-full">
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden relative">
-          <Image
-            src={mainImages[mainCurrentIndex]}
-            alt={`Main Slide ${mainCurrentIndex + 1}`}
-            className="w-full h-full object-cover object-center"
-          />
-          {/* Slider indicators */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {mainImages.map((_, index) => (
-              <div
-                key={index}
-                className={`w-4 h-1.5 rounded ${index === mainCurrentIndex ? 'bg-red-600' : 'bg-gray-100'}`}
-              />
-            ))}
+    <div className='bg-yellow-100 md:bg-white rounded-lg -mt-0.5'>
+        <section className="pb-12">
+          <div className="px-2 2xl:mx-16 sm:px-0 xl:px-8">
+            <div className="grid items-center grid-cols-1 sm:gap-12 gap-6 lg:grid-cols-2">
+              <div className="order-2 lg:order-1">
+                <h1 className="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
+                  İlan Vermek Artık Çok Kolay!
+                </h1>
+                
+                <p className="mt-5 lg:mt-8 text-base text-gray-700 sm:text-xl font-semibold">Aracınızı milyonlarca potansiyel alıcıyla buluşturun. İlanınızı oluşturun ve biz paylaşalım! Profesyonel ve etkili bir paylaşım için doğru yerdesiniz.</p>
+                <div className="mt-10 sm:flex sm:items-center sm:space-x-8">
+                  <a href="#" className="inline-flex items-center justify-center px-10 py-4 rounded-2xl text-base font-semibold text-white transition-all duration-200 bg-red-600 hover:bg-red-500" role="button"> İlan Paketlerini İncele! </a>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <Image className="w-full rounded-xl" src={Banner} alt="" />
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
-
-      {/* Altında iki görsel yan yana - Masaüstü için Carousel */}
-      <div className="flex flex-row lg:w-1/2 w-full gap-3 lg:gap-4">
-        <div className="w-full lg:hidden flex gap-3">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden w-1/2">
-            <Image
-              src={BannerTwo}
-              alt="Small 1"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden w-1/2">
-            <Image
-              src={BannerThree}
-              alt="Small 2"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-        </div>
-
-        {/* Carousel for desktop */}
-        <div className="hidden lg:block w-full relative">
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <Image
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
-
-          {/* Slider indicators */}
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {images.map((_, index) => (
-              <div
-                key={index}
-                className={`w-4 h-1.5 rounded ${index === currentIndex ? 'bg-red-600' : 'bg-gray-100'}`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

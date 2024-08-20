@@ -1,4 +1,4 @@
-import Banner from '../img/banner.png';
+import Banner from '../img/carcik.png';
 import Image from 'next/image';
 
 const Hero = () => {

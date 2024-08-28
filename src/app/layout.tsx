@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Arabaprime",
-  description: "Arabaprime ile ilan vermek artık çok olay!",
+  description: "Arabaprime ile ilan vermek artık çok kolay!",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen pb-16 lg:pb-0 mb-2 lg:mb-0">
           <Navbar/>
           <main className="flex-grow">{children}</main>
           <Footer/>

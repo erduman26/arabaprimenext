@@ -7,7 +7,7 @@ const Bizeulasin = () => {
     <div>
       <div className="flex justify-center pt-24 lg:pt-32 pb-6 lg:pb-20">
         <div className="w-full mx-4 lg:mx-0 lg:mt-2">
-          <div className="flex bg-white rounded-lg shadow mx-auto 2xl:mx-24 lg:mx-4">
+          <div className="flex bg-white rounded-lg md:shadow mx-auto 2xl:mx-24 lg:mx-4">
             <div className="block lg:w-10/12 md:w-full">
               <div className="relative flex items-center justify-center h-full rounded-l-lg shadow-lg bg-cover bg-center" style={{ backgroundImage: 'url("https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")' }}>
                 <div className="hidden lg:block relative z-10 w-full max-w-lg bg-white opacity-90 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-200">
@@ -33,12 +33,12 @@ const Bizeulasin = () => {
               </div>
             </div>
 
-            <div className="w-full p-8 lg:w-8/12 md:w-full border border-gray-200 rounded-r-lg shadow-lg">
-              <div className="w-20 ml-auto mr-auto mb-2">
-                <Image className="rounded-full" src={Logo} alt="arabaprime" />
+            <div className="w-full md:p-8 lg:w-8/12 md:w-full md:border md:border-gray-200 md:rounded-r-lg md:shadow-lg">
+              <div className="w-14 sm:w-20 ml-auto mr-auto mb-2">
+                <Image className="rounded-xl" src={Logo} alt="arabaprime" />
               </div>
               <div className="flex items-center justify-center">
-                <h1 className="text-3xl font-bold text-gray-800">Araba<span className="text-red-600">prime</span></h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">Araba<span className="text-red-600">prime</span></h1>
               </div>
               <div className="mt-4 flex items-center justify-between">
                 <span className="border-b w-1/5 lg:w-1/4" />

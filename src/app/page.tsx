@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import AdPackages from '../components/AdPackages';
+import Features from '../components/Features';
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
     </div>
     <div>
     <AdPackages />
+    </div>
+    <div>
+      <Features />
     </div>
     </>
   );

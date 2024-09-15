@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
-import { FiArrowRight } from "react-icons/fi";
+import React, { useEffect, useState } from "react";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 
 const features = [
   {
@@ -16,7 +16,7 @@ const features = [
     color: "text-red-500 hover:text-red-600",
   },
   {
-    title: "Instagram Optimizasyonu",
+    title: "İnstagram Optimizasyonu",
     description: "Aracınızın görünürlüğünü artırmak için optimize edilmiş paylaşımlar yapıyoruz. Görsellerinizi ve bilgilerinizi en iyi şekilde sergiliyoruz.",
     icon: "https://www.svgrepo.com/show/475038/charter.svg",
     color: "text-green-500 hover:text-green-600",
@@ -31,92 +31,125 @@ const features = [
 
 const Features = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [startX, setStartX] = useState(0);
-  const [endX, setEndX] = useState(0);
-  const [startTime, setStartTime] = useState(0);
-  const sliderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide === features.length - 1 ? 0 : prevSlide + 1));
+      setCurrentSlide((prevSlide) =>
+        prevSlide === features.length - 1 ? 0 : prevSlide + 1
+      );
     }, 7000);
+
     return () => clearInterval(slideInterval);
   }, []);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setStartX(e.touches[0].clientX);
-    setStartTime(Date.now());
+  const handlePrevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? features.length - 1 : prevSlide - 1
+    );
   };
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    setEndX(e.changedTouches[0].clientX);
-    const diffX = startX - endX;
-    const duration = Date.now() - startTime;
-
-    // Kaydırma eşiği ve süresi
-    const swipeThreshold = 50;
-    const swipeSpeedThreshold = 300; // Hız eşiği (ms)
-
-    if (Math.abs(diffX) > swipeThreshold && duration < swipeSpeedThreshold) {
-      if (diffX > 0) {
-        // Swipe left
-        setCurrentSlide((prevSlide) => (prevSlide === features.length - 1 ? 0 : prevSlide + 1));
-      } else {
-        // Swipe right
-        setCurrentSlide((prevSlide) => (prevSlide === 0 ? features.length - 1 : prevSlide - 1));
-      }
-    }
+  const handleNextSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === features.length - 1 ? 0 : prevSlide + 1
+    );
   };
 
   return (
     <section className="wrapper mx-4 2xl:mx-24">
       <div className="pt-12 xl:pt-20 pb-16 xl:pb-20 text-center">
         <div className="md:w-10/12 xl:w-8/12 mx-auto">
-          <h2 className="text-base uppercase text-gray-400 mb-3 tracking-wider font-semibold">Ne Yapıyoruz?</h2>
-          <h3 className="text-xl md:text-2xl lg:text-4xl font-bold mb-4 lg:tracking-wide">
-            Araba Satışında Yüksek Etkili Stratejik Çözümler Sunuyoruz
+          <h2 className="text-base uppercase text-gray-400 mb-3 tracking-wider font-semibold">
+            Ne Yapıyoruz?
+          </h2>
+          <h3 className="text-xl md:text-2xl lg:text-4xl font-bold mb-10 lg:tracking-wide">
+            Araba Satışında İhtiyaçlarınıza Uygun Yüksek Etkili Stratejik Çözümler Sunuyoruz
           </h3>
         </div>
 
-        {/* Mobil Versiyonu */}
-        <div
-          className="block sm:hidden relative mx-auto overflow-hidden rounded-lg shadow-lg"
-          ref={sliderRef}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
-        >
+        {/* Mobil Versiyonu: Sadece mobilde kaydırma */}
+        <div className="block sm:hidden relative mx-auto overflow-hidden rounded-lg shadow-lg">
+          {/* Sadece mobilde sağ sol yönlendirme */}
+        <div className="bg-red-500 w-full text-white font-semibold py-1.5 flex justify-between items-center px-2">
+          <button
+            className=""
+            onClick={handlePrevSlide}
+          >
+            <FiArrowLeft className="text-white w-6 h-6" />
+          </button>
+          <span>Prime Hizmet</span>
+          <button
+            className=","
+            onClick={handleNextSlide}
+          >
+            <FiArrowRight className="text-white w-6 h-6" />
+          </button>
+        </div>
           <div
             className="relative flex transition-transform duration-1000 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {features.map((feature, index) => (
-              <div key={index} className="flex-shrink-0 w-full p-8 flex flex-col items-center rounded-lg border bg-white">
-                <img src={feature.icon} alt={feature.title} className="w-20 h-20 mb-4" />
+              <div
+                key={index}
+                className="flex-shrink-0 w-full h-full p-8 flex flex-col items-center rounded-b-lg border bg-white"
+              >
+                <img
+                  src={feature.icon}
+                  alt={`Feature ${index}`}
+                  className="w-20 h-20 mb-4"
+                />
                 <h4 className="text-lg font-semibold pb-3">{feature.title}</h4>
-                <p className="mb-4 font-medium line-clamp-4">{feature.description}</p>
-                <a href="#" className={`flex items-center ${feature.color} font-semibold`}>
-                  Daha Fazla Bilgi Edin <FiArrowRight className="ml-0.5" style={{ strokeWidth: 3.5 }} />
-                </a>
+                <p className="mb-4 font-medium line-clamp-4">
+                  {feature.description}
+                </p>
+                <div
+                  className={`flex items-center ${feature.color} font-semibold`}
+                >
+                  <a href="#" className="text-[14.5px]">
+                    Daha Fazla Bilgi Edin
+                  </a>
+                  <FiArrowRight
+                    className="ml-0.5"
+                    style={{ strokeWidth: 3.5 }}
+                  />
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Masaüstü Versiyonu */}
+        {/* Masaüstü Versiyonu: Statik grid layout */}
         <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-10">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center rounded-lg border bg-white shadow-lg p-8">
-              <img src={feature.icon} alt={feature.title} className="w-20 h-20 mb-4" />
+            <div
+              key={index}
+              className="flex flex-col items-center rounded-lg border bg-white shadow-lg p-8"
+            >
+              <img
+                src={feature.icon}
+                alt={`Feature ${index}`}
+                className="w-20 h-20 mb-4"
+              />
               <h4 className="text-lg font-semibold pb-3">{feature.title}</h4>
-              <p className="mb-4 font-medium line-clamp-4">{feature.description}</p>
-              <a href="#" className={`flex items-center ${feature.color} font-semibold`}>
-                Daha Fazla Bilgi Edin <FiArrowRight className="ml-0.5" style={{ strokeWidth: 3.5 }} />
-              </a>
+              <p className="mb-4 font-medium line-clamp-4">
+                {feature.description}
+              </p>
+              <div
+                className={`flex items-center ${feature.color} font-semibold`}
+              >
+                <a href="#" className="text-[14.5px]">
+                  Daha Fazla Bilgi Edin
+                </a>
+                <FiArrowRight
+                  className="ml-0.5"
+                  style={{ strokeWidth: 3.5 }}
+                />
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Navigasyon Noktaları */}
+        {/* Navigasyon noktaları mobilde */}
         <div className="sm:hidden relative mx-auto mt-4 flex space-x-2 justify-center">
           {features.map((_, index) => (
             <div

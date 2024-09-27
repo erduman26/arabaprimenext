@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
 import { BiShare } from "react-icons/bi";
-import Ücretsiz from '../img/ücretsizpaket.jpg';
 import Destek from '../img/destekpaket.jpg';
 import Nitelikli from '../img/niteliklipaket.jpg';
 import Uzman from '../img/uzmanpaket.jpg';
+import Ücretsiz from '../img/ücretsizpaket.jpg'
 
 const AdPackages = () => {
   return (

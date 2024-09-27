@@ -8,24 +8,28 @@ const features = [
     description: "Aracınızı geniş bir kitleye ulaştırarak etkili bir şekilde tanıtıyoruz. Görsellerinizi büyük bir takipçi kitlesi ile paylaşarak daha fazla dikkat çekmesini sağlıyoruz.",
     icon: "https://www.svgrepo.com/show/499835/data-report.svg",
     color: "text-amber-500 hover:text-amber-600",
+    link: "/genis-kitle-erisimi",
   },
   {
     title: "Çeşitli Paket Seçenekleri",
     description: "Farklı bütçelere ve ihtiyaçlara uygun paketler sunuyoruz. Her paket, aracınızı Instagram da en iyi şekilde tanıtmak için özel olarak hazırlanmıştır.",
     icon: "https://www.svgrepo.com/show/530252/bookshelf.svg",
     color: "text-red-500 hover:text-red-600",
+    link: "/cesitli-paket-secenekleri",
   },
   {
     title: "İnstagram Optimizasyonu",
     description: "Aracınızın görünürlüğünü artırmak için optimize edilmiş paylaşımlar yapıyoruz. Görsellerinizi ve bilgilerinizi en iyi şekilde sergiliyoruz.",
     icon: "https://www.svgrepo.com/show/475038/charter.svg",
     color: "text-green-500 hover:text-green-600",
+    link: "/instagram-optimizasyonu",
   },
   {
     title: "Alıcı Kitlesi Hedefleme",
     description: "Aracınızı doğru alıcılarla buluşturmak için hedeflenmiş paylaşımlar yapıyoruz. Potansiyel alıcıları analiz ederek, en uygun kitleye ulaşıyoruz.",
     icon: "https://www.svgrepo.com/show/499831/target.svg",
     color: "text-indigo-500 hover:text-indigo-600",
+    link: "/alici-kitlesi-hedefleme",
   },
 ];
 
@@ -61,7 +65,7 @@ const Features = () => {
           <h2 className="text-base uppercase text-gray-400 mb-3 tracking-wider font-semibold">
             Ne Yapıyoruz?
           </h2>
-          <h3 className="text-xl md:text-2xl lg:text-4xl font-bold mb-10 lg:tracking-wide">
+          <h3 className="text-xl md:text-2xl lg:text-4xl font-bold mb-5 lg:tracking-wide">
             Araba Satışında İhtiyaçlarınıza Uygun Yüksek Etkili Stratejik Çözümler Sunuyoruz
           </h3>
         </div>
@@ -105,7 +109,7 @@ const Features = () => {
                 <div
                   className={`flex items-center ${feature.color} font-semibold`}
                 >
-                  <a href="#" className="text-[14.5px]">
+                  <a href={feature.link} className="text-[14.5px]">
                     Daha Fazla Bilgi Edin
                   </a>
                   <FiArrowRight
@@ -137,7 +141,7 @@ const Features = () => {
               <div
                 className={`flex items-center ${feature.color} font-semibold`}
               >
-                <a href="#" className="text-[14.5px]">
+                <a href={feature.link} className="text-[14.5px]">
                   Daha Fazla Bilgi Edin
                 </a>
                 <FiArrowRight

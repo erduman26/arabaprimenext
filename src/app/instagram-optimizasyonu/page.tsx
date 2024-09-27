@@ -25,7 +25,7 @@ const İnstagramOptimizasyonu = () => {
         <div className='mb-6 p-1'>
           <h3 className="text-2xl font-semibold mb-4">Hashtag ve Etiket Kullanımı</h3>
             <p className='font-medium'>
-              Doğru hashtag ve etiketlerle, aracınızı ilgilenen kişilere ulaştırırız. Yalnızca takipçilerimiz değil, aynı zamanda araç arayan ve ilgili hashtag’leri takip eden kullanıcılar da aracınızı görebilir. Bu stratejiyle, paylaşımlarınızın görünürlüğünü artırır ve hedef kitlenizin genişlemesini sağlarız.
+              Doğru hashtag ve etiketlerle, aracınızı ilgilenen kişilere ulaştırırız. Yalnızca takipçilerimiz değil, aynı zamanda araç arayan ve ilgili hashtagleri takip eden kullanıcılar da aracınızı görebilir. Bu stratejiyle, paylaşımlarınızın görünürlüğünü artırır ve hedef kitlenizin genişlemesini sağlarız.
             </p>
         </div>
         <div className='mb-6 p-1'>
@@ -37,7 +37,7 @@ const İnstagramOptimizasyonu = () => {
         <div className='mb-6 p-1'>
           <h3 className="text-2xl font-semibold mb-4">Görsel Optimizasyonu</h3>
             <p className='font-medium'>
-              Aracınızın en iyi fotoğraflarını seçer ve profesyonelce düzenleriz. İyi bir fotoğraf, aracınızın ilk izlenimini oluşturur ve potansiyel alıcıların dikkatini çeker. Işık, açı ve detayların ön plana çıkarılmasıyla görselleriniz, Instagram'da daha fazla etkileşim alacak şekilde optimize edilir.
+              Aracınızın en iyi fotoğraflarını seçer ve profesyonelce düzenleriz. İyi bir fotoğraf, aracınızın ilk izlenimini oluşturur ve potansiyel alıcıların dikkatini çeker. Işık, açı ve detayların ön plana çıkarılmasıyla görselleriniz, Instagram da daha fazla etkileşim alacak şekilde optimize edilir.
             </p>
         </div>
       </div>

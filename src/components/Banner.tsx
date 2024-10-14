@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import BannerTwo from '../img/phonebanner.png';
-import BannerThree from '../img/socialmedia.jpeg';
+import BannerTwo from '../img/phonebanners.webp';
 const Banner = () => {
   return (
     <div className="flex flex-col space-y-4">

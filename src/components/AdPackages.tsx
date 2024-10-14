@@ -27,9 +27,9 @@ const AdPackages = () => {
         <div className="mt-2 md:mt-3">
           
           <div className="flex items-center mt-2 space-x-1 text-white">
-            <button className="text-base font-semibold bg-red-600 px-3 py-1 rounded-md w-full flex items-center justify-center">
+            <a href='/ucretsiz-paket' className="text-base font-semibold bg-red-600 px-3 py-1 rounded-md w-full flex items-center justify-center">
               Paketi İncele
-            </button>
+            </a>
           </div>
         </div>
       </div>

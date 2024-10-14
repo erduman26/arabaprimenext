@@ -41,7 +41,7 @@ const İnstagramOptimizasyonu = () => {
             </p>
         </div>
       </div>
-      <div className="w-[298px] ml-4 hidden lg:block">
+      <div className="w-[345px] ml-3 hidden lg:block">
         <Banner />
       </div>
     </div>

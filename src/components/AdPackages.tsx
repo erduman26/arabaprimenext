@@ -69,7 +69,7 @@ const AdPackages = () => {
           {/* Görselin üstüne gelen overlay */}
           <div className="absolute inset-0 bg-white bg-opacity-85 flex items-center justify-center rounded">
             <span className="text-red-600 font-bold text-lg md:text-xl xl:text-2xl transform rotate-[-45deg] mb-12">
-              Henüz Aktif Değil
+              Aktif Değil
             </span>
           </div>
         <div className="mt-2 md:mt-3">

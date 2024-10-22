@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Ücretsiz from '../../img/ücretsizpaket.png';
+import Ücretsiz from '../../img/uzmanpaket.png';
 import { HiMiniChevronDown, HiMiniChevronUp } from 'react-icons/hi2';
 
-const UcretsizPaket = () => {
+const UzmanPaket = () => {
   const [activeSection, setActiveSection] = useState<string | null>('aciklama'); // Default olarak "aciklama" aktif
 
   const toggleSection = (section: string) => {
@@ -23,29 +23,29 @@ const UcretsizPaket = () => {
           <div>
             {/* Metin kısmı */}
             <div className="flex-1 mt-4 md:mt-0 mx-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-3 md:mb-5">Ücretsiz İlan Paketi</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-3 md:mb-5">Uzman İlan Paketi</h2>
               
               {/* Fiyat Bilgisi */}
               <div className="flex mb-0.5 md:mb-2">
                 <div className="mr-4 text-lg">
                   <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Fiyat:</span>
-                  <span className="font-bold text-gray-700 dark:text-gray-300">Ücretsiz</span>
+                  <span className="font-bold text-gray-700 dark:text-gray-300">200TL</span>
                 </div>
               </div>
 
               {/* Paket sayısı ve kalan süre */}
               <div className="mb-0.5 md:mb-2 text-lg">
-                <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Kalan Paket Sayısı:</span>
-                <span className="text-red-600 font-bold">10</span>
+                <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Paket Performansı:</span>
+                <span className="text-red-600 font-bold">5-5</span>
               </div>
               <div className="text-lg mb-4 md:mb-0">
-                <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Sıfırlanmaya Kalan:</span>
-                <span className="text-red-600 font-bold">16:42:28</span>
+                <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Etkileşim Seviyesi:</span>
+                <span className="text-red-600 font-bold">3-5</span>
               </div>
             </div>
 
             <div className='hidden md:block py-4 mb-2'>
-              <button className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Ücretsiz Edin</button>
+              <button className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Satın Al</button>
             </div>
 
             {/* Açılır Kapanır İlan Paketi Açıklaması */}
@@ -56,7 +56,7 @@ const UcretsizPaket = () => {
               </div>
               {activeSection === 'aciklama' && (
                 <p className="font-medium text-gray-600 dark:text-gray-300 text-base mt-2">
-                  Arabaprime platformunda sunulan, kullanıcıların araçlarını kolayca listeleyip geniş bir kitleye ulaşmasını sağlayan temel bir hizmettir. Bu paketle, aracınızın fotoğraflarını ve detaylarını platformda paylaşarak potansiyel alıcılara ulaşabilirsiniz. Üstelik herhangi bir ücret ödemenize gerek kalmadan, geniş bir organik takipçi kitlesine erişim sağlayabilirsiniz.
+                  Arabaprime platformunda sunulan Uzman Paketi, araç sahiplerine en etkili satış çözümlerini sunar. Bu paketle aracınız, profesyonel bir şekilde tanıtılır ve potansiyel alıcılara maksimum erişim sağlanır. Ayrıca, ilanınız 3 gün boyunca Arabaprime Instagram hesabında sabitlenir, böylece takipçilerimizin gözünde daha fazla görünürlük kazanır.
                 </p>
               )}
             </div>
@@ -76,7 +76,7 @@ const UcretsizPaket = () => {
 
             {/* Alt kısım (mobil buton) */}
             <div className='md:hidden fixed left-0 right-0 bottom-0 py-4 flex justify-center items-center rounded-t-2xl bg-white shadow-[0_-2px_2px_rgba(0,0,0,0.1)]'>
-              <button className="bg-red-600 text-white font-semibold py-2 w-full mx-4 rounded-lg">Ücretsiz Edin</button>
+              <button className="bg-red-600 text-white font-semibold py-2 w-full mx-4 rounded-lg">Satın Al</button>
             </div>
           </div>
         </div>
@@ -85,4 +85,4 @@ const UcretsizPaket = () => {
   );
 };
 
-export default UcretsizPaket;
+export default UzmanPaket;

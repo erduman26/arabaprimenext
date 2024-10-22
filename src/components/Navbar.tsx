@@ -16,8 +16,8 @@ const Navbar = () => {
     setIsModalOpen(!isModalOpen);
   };
 
-  // Eğer /ucretsiz-paket sayfasındaysak, alttaki navbar gizlenecek
-  const hideMobileNavbar = pathname === '/ucretsiz-paket';
+  // Eğer /ucretsiz-paket, /destek-paket veya /uzman-paket sayfasındaysak, alttaki navbar gizlenecek
+  const hideMobileNavbar = pathname === '/ucretsiz-paket' || pathname === '/destek-paket' || pathname === '/uzman-paket';
 
   return (
     <nav className="fixed w-full z-50 bg-white shadow 2xl:px-24">

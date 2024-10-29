@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from "../img/logo.jpg";
+import Basket from '../svg/basket.svg';
 import { CiHome, CiShop, CiUser, CiGrid41 } from "react-icons/ci";
 import { HiXMark, HiOutlineShoppingBag, HiBars3BottomRight  } from "react-icons/hi2";
 import AplicationModal from './AplicationModal';
@@ -21,7 +22,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-white shadow 2xl:px-24">
-      <div className="mx-auto px-4 2xl:px-2 py-4 flex items-center justify-between">
+      <div className="mx-auto px-4 2xl:px-2 py-3.5 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Image
             className='w-11 rounded-xl'
@@ -44,7 +45,7 @@ const Navbar = () => {
           <Link href="/sikcasorulansorular" className={`text-gray-950 ${pathname === '/sikcasorulansorular' ? 'text-red-600' : ''}`}>Sss</Link>
           <Link href="/uyegirisi" className="text-red-600 border-2 border-red-600 py-1.5 px-6 rounded-xl">Üye Girişi</Link>
           <Link href="/sepetim" passHref>
-              <HiOutlineShoppingBag className='w-10 h-10 text-gray-700'/>
+            <Image src={Basket} alt="Report Icon" className='w-[50px] h-[50px]' />
           </Link>
         </div>
       </div>

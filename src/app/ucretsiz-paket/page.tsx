@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Ücretsiz from '../../img/ücretsizpaket.png';
+import Oneİcon from '../../svg/oneicon.svg';
+import Twoİcon from '../../svg/twoicon.svg';
+import Threeİcon from '../../svg/threeicon.svg';
+import Fourİcon from '../../svg/fouricon.svg';
 import { HiMiniChevronDown, HiMiniChevronUp } from 'react-icons/hi2';
 
 const UcretsizPaket = () => {
@@ -24,12 +28,32 @@ const UcretsizPaket = () => {
             {/* Metin kısmı */}
             <div className="flex-1 mt-4 md:mt-0 mx-2">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-3 md:mb-5">Ücretsiz İlan Paketi</h2>
-              
-              {/* Fiyat Bilgisi */}
-              <div className="flex mb-0.5 md:mb-2">
-                <div className="mr-4 text-lg">
-                  <span className="font-bold text-gray-700 dark:text-gray-300 mr-0.5">Fiyat:</span>
-                  <span className="font-bold text-gray-700 dark:text-gray-300">Ücretsiz</span>
+
+              {/* Svg */}
+              <div className="flex space-x-2.5 lg:space-x-4 mb-4 md:mb-4">
+                <div className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 flex justify-center items-center rounded-lg bg-red-500 px-0.5">
+                  <Image
+                    src={Oneİcon}
+                    alt="Report Icon"
+                  />
+                </div>
+                <div className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 flex justify-center items-center rounded-lg bg-red-500 px-0.5">
+                  <Image
+                    src={Twoİcon}
+                    alt="Report Icon"
+                  />
+                </div>
+                <div className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 flex justify-center items-center rounded-lg bg-red-500 px-0.5">
+                  <Image
+                    src={Threeİcon}
+                    alt="Report Icon"
+                  />
+                </div>
+                <div className="w-20 h-20 md:w-16 md:h-16 lg:w-20 lg:h-20 flex justify-center items-center rounded-lg bg-red-500 px-0.5">
+                  <Image
+                    src={Fourİcon}
+                    alt="Report Icon"
+                  />
                 </div>
               </div>
 

@@ -6,14 +6,9 @@ import Oneİcon from '../../svg/oneicon.svg';
 import Twoİcon from '../../svg/twoicon.svg';
 import Threeİcon from '../../svg/threeicon.svg';
 import Fourİcon from '../../svg/fouricon.svg';
-import { HiMiniChevronDown, HiMiniChevronUp } from 'react-icons/hi2';
 
 const UcretsizPaket = () => {
-  const [activeSection, setActiveSection] = useState<string | null>('aciklama'); // Default olarak "aciklama" aktif
-
-  const toggleSection = (section: string) => {
-    setActiveSection(activeSection === section ? null : section);
-  };
+  const [activeTab, setActiveTab] = useState<'aciklama' | 'ozellikler'>('aciklama');
 
   return (
     <div className="dark:bg-gray-800 py-8 pt-24 lg:pt-28 xl:pt-32 mb-8">
@@ -24,7 +19,7 @@ const UcretsizPaket = () => {
             <Image className="w-full h-full shadow-md rounded" src={Ücretsiz} alt="Product Image" />
           </div>
 
-          <div>
+          <div className='w-full'>
             {/* Metin kısmı */}
             <div className="flex-1 mt-4 md:mt-0 mx-2">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-3 md:mb-5">Ücretsiz İlan Paketi</h2>
@@ -72,29 +67,34 @@ const UcretsizPaket = () => {
               <button className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Ücretsiz Edin</button>
             </div>
 
-            {/* Açılır Kapanır İlan Paketi Açıklaması */}
-            <div className="mb-4 bg-gray-100 p-4 rounded-lg shadow-lg">
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleSection('aciklama')}>
-                <span className="font-bold text-gray-700 dark:text-gray-300 text-lg">İlan Paketi Açıklaması</span>
-                {activeSection === 'aciklama' ? <HiMiniChevronUp className='w-6 h-6' /> : <HiMiniChevronDown className='w-6 h-6' />}
-              </div>
-              {activeSection === 'aciklama' && (
-                <p className="font-medium text-gray-600 dark:text-gray-300 text-base mt-2">
-                  Arabaprime platformunda sunulan, kullanıcıların araçlarını kolayca listeleyip geniş bir kitleye ulaşmasını sağlayan temel bir hizmettir. Bu paketle, aracınızın fotoğraflarını ve detaylarını platformda paylaşarak potansiyel alıcılara ulaşabilirsiniz. Üstelik herhangi bir ücret ödemenize gerek kalmadan, geniş bir organik takipçi kitlesine erişim sağlayabilirsiniz.
-                </p>
-              )}
+            {/* Tab Menü */}
+            <div className="flex space-x-6 text-lg mb-3 font-bold ml-2 text-gray-700 border-b-2">
+              <button
+                className={`pb-2 ${activeTab === 'aciklama' ? 'border-b-2 border-gray-600' : ''}`}
+                onClick={() => setActiveTab('aciklama')}
+              >
+                Açıklama
+              </button>
+              <button
+                className={`pb-2 ${activeTab === 'ozellikler' ? 'border-b-2 border-gray-600' : ''}`}
+                onClick={() => setActiveTab('ozellikler')}
+              >
+                Özellikler
+              </button>
             </div>
 
-            {/* Açılır Kapanır İlan Paketi Özellikleri */}
-            <div className='bg-gray-100 p-4 rounded-lg shadow-lg'>
-              <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleSection('ozellikler')}>
-                <span className="font-bold text-gray-700 dark:text-gray-300 text-lg">İlan Paketi Özellikleri</span>
-                {activeSection === 'ozellikler' ? <HiMiniChevronUp className='w-6 h-6' /> : <HiMiniChevronDown className='w-6 h-6' />}
-              </div>
-              {activeSection === 'ozellikler' && (
-                <p className="font-medium text-gray-600 dark:text-gray-300 text-base mt-2">
-                  Ücretsiz paket, Arabaprime platformunda aracınızı listeleyebilmeniz için sunulan temel özellikleri içerir. Bu paketle, aracınızı hiçbir ücret ödemeden geniş bir organik kitleye ulaştırabilirsiniz.
+            {/* Sekme İçeriği */}
+            <div className="ml-2">
+              {activeTab === 'aciklama' ? (
+                <p className="text-gray-800">
+                  Arabaprime platformunda sunulan, kullanıcıların araçlarını kolayca listeleyip geniş bir kitleye ulaşmasını sağlayan temel bir hizmettir.
+                  Bu paketle, aracınızın fotoğraflarını ve detaylarını platformda paylaşarak potansiyel alıcılara ulaşabilirsiniz. Üstelik herhangi bir ücret ödemenize gerek kalmadan, geniş bir organik takipçi kitlesine erişim sağlayabilirsiniz.
                 </p>
+              ) : (
+                <ul className="text-gray-800 list-disc ml-4">
+                  <li>Post paylaşımı.</li>
+                  <li>Hikaye paylaşımı.</li>
+                </ul>
               )}
             </div>
 

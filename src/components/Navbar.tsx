@@ -42,7 +42,6 @@ const Navbar = () => {
           <Link href="/urunler" className={`text-gray-950 ${pathname === '/urunler' ? 'text-red-600' : ''}`}>Ürünler</Link>
           <Link href="/hakkimizda" className={`text-gray-950 ${pathname === '/hakkimizda' ? 'text-red-600' : ''}`}>Hakkımızda</Link>
           <Link href="/bizeulasin" className={`text-gray-950 ${pathname === '/bizeulasin' ? 'text-red-600' : ''}`}>Bize Ulaşın</Link>
-          <Link href="/sikcasorulansorular" className={`text-gray-950 ${pathname === '/sikcasorulansorular' ? 'text-red-600' : ''}`}>Sss</Link>
           <Link href="/uyegirisi" className="text-red-600 border-2 border-red-600 py-1.5 px-6 rounded-xl">Üye Girişi</Link>
           <Link href="/sepetim" passHref>
             <Image src={Basket} alt="Report Icon" className='w-[50px] h-[50px]' />

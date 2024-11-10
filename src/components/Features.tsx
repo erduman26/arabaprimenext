@@ -6,28 +6,28 @@ const features = [
   {
     title: "Geniş Kitle Erişimi",
     description: "Aracınızı geniş bir kitleye ulaştırarak etkili bir şekilde tanıtıyoruz. Görsellerinizi büyük bir takipçi kitlesi ile paylaşarak daha fazla dikkat çekmesini sağlıyoruz.",
-    icon: "https://www.svgrepo.com/show/499835/data-report.svg",
+    icon: "geniskitleerisimi.svg",
     color: "text-amber-500 hover:text-amber-600",
     link: "/genis-kitle-erisimi",
   },
   {
     title: "Çeşitli Paket Seçenekleri",
     description: "Farklı bütçelere ve ihtiyaçlara uygun paketler sunuyoruz. Her paket, aracınızı Instagram da en iyi şekilde tanıtmak için özel olarak hazırlanmıştır.",
-    icon: "https://www.svgrepo.com/show/530252/bookshelf.svg",
+    icon: "cesitlipaketsecenekleri.svg",
     color: "text-red-500 hover:text-red-600",
     link: "/cesitli-paket-secenekleri",
   },
   {
     title: "İnstagram Optimizasyonu",
     description: "Aracınızın görünürlüğünü artırmak için optimize edilmiş paylaşımlar yapıyoruz. Görsellerinizi ve bilgilerinizi en iyi şekilde sergiliyoruz.",
-    icon: "https://www.svgrepo.com/show/475038/charter.svg",
+    icon: "instagramoptimizasyonu.svg",
     color: "text-green-500 hover:text-green-600",
     link: "/instagram-optimizasyonu",
   },
   {
     title: "Alıcı Kitlesi Hedefleme",
     description: "Aracınızı doğru alıcılarla buluşturmak için hedeflenmiş paylaşımlar yapıyoruz. Potansiyel alıcıları analiz ederek, en uygun kitleye ulaşıyoruz.",
-    icon: "https://www.svgrepo.com/show/499831/target.svg",
+    icon: "alicikitlesihedefleme.svg",
     color: "text-indigo-500 hover:text-indigo-600",
     link: "/alici-kitlesi-hedefleme",
   },
@@ -60,7 +60,7 @@ const Features = () => {
 
   return (
     <section className="wrapper mx-4 2xl:mx-24">
-      <div className="pt-12 xl:pt-20 pb-16 xl:pb-20 text-center">
+      <div className="pt-12 xl:pt-20 pb-10 xl:pb-20 text-center">
         <div className="md:w-10/12 xl:w-8/12 mx-auto">
           <h2 className="text-base uppercase text-gray-400 mb-3 tracking-wider font-semibold">
             Ne Yapıyoruz?
@@ -95,12 +95,12 @@ const Features = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-full h-full p-8 flex flex-col items-center rounded-b-lg border bg-white"
+                className="flex-shrink-0 w-full h-full px-8 pb-8 pt-2 flex flex-col items-center rounded-b-lg border bg-white"
               >
                 <img
                   src={feature.icon}
                   alt={`Feature ${index}`}
-                  className="w-20 h-20 mb-4"
+                  className="w-32 h-32"
                 />
                 <h4 className="text-lg font-semibold pb-3">{feature.title}</h4>
                 <p className="mb-4 font-medium line-clamp-4">
@@ -123,16 +123,16 @@ const Features = () => {
         </div>
 
         {/* Masaüstü Versiyonu: Statik grid layout */}
-        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-10">
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-10 2xl:mx-2">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-center rounded-lg border bg-white shadow-lg p-8"
+              className="flex flex-col items-center rounded-lg border bg-white shadow-lg px-8 pb-8 pt-2"
             >
               <img
                 src={feature.icon}
                 alt={`Feature ${index}`}
-                className="w-20 h-20 mb-4"
+                className="w-32 h-32"
               />
               <h4 className="text-lg font-semibold pb-3">{feature.title}</h4>
               <p className="mb-4 font-medium line-clamp-4">

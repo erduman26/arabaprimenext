@@ -55,7 +55,6 @@ const AddImageForm = () => {
                             className="hidden"
                             multiple
                             accept="image/*"
-                            capture="environment"
                             onChange={handleFileUpload}
                         />
                     </label>

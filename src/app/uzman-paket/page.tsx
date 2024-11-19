@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Ücretsiz from '../../img/uzmanpaket.png';
 import Oneİcon from '../../svg/oneicon.svg';
 import Twoİcon from '../../svg/twoicon.svg';
@@ -12,7 +13,7 @@ const UzmanPaket = () => {
   const [activeTab, setActiveTab] = useState<'aciklama' | 'ozellikler'>('aciklama');
 
   return (
-    <div className="dark:bg-gray-800 py-8 pt-24 lg:pt-28 xl:pt-32 mb-8">
+    <div className="py-8 -mt-2 md:mt-0 pt-24 lg:pt-28 xl:pt-32 mb-8">
       <div className="mx-2 px-2 2xl:mx-24">
         <div className="flex flex-col md:flex-row md:items-start md:gap-8">
 
@@ -60,7 +61,7 @@ const UzmanPaket = () => {
               <Image src={Price} alt="Buy Icon" className="w-6 h-6 mr-2" />
               200TL
             </p>
-            <button className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Satın Al</button>
+            <Link href="/uzman-paket/uzman-ilan-formu" className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Satın Al</Link>
           </div>
 
             {/* Tab Menü */}
@@ -99,7 +100,7 @@ const UzmanPaket = () => {
                 <Image src={Price} alt="Buy Icon" className="w-6 h-6 mr-2" />
                 200TL
               </p>
-              <button className="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg flex-1">Satın Al</button>
+              <Link href="/uzman-paket/uzman-ilan-formu" className="bg-red-600 text-white text-center font-semibold py-2 px-4 rounded-lg flex-1">Satın Al</Link>
             </div>
           </div>
         </div>

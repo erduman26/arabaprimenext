@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Ücretsiz from '../../img/ücretsizpaket.png';
 import Oneİcon from '../../svg/oneicon.svg';
 import Twoİcon from '../../svg/twoicon.svg';
@@ -11,7 +12,7 @@ const UcretsizPaket = () => {
   const [activeTab, setActiveTab] = useState<'aciklama' | 'ozellikler'>('aciklama');
 
   return (
-    <div className="dark:bg-gray-800 py-8 pt-24 lg:pt-28 xl:pt-32 mb-8">
+    <div className="py-8 -mt-2 md:mt-0 pt-24 lg:pt-28 xl:pt-32 mb-8">
       <div className="mx-2 px-2 2xl:mx-24">
         <div className="flex flex-col md:flex-row md:items-start md:gap-8">
           {/* Görsel kısmı */}
@@ -63,8 +64,10 @@ const UcretsizPaket = () => {
               </div>
             </div>
 
-            <div className='hidden md:block py-4 mb-2'>
-              <button className="bg-red-600 text-white font-semibold py-2 px-8 mx-2 rounded-lg shadow">Ücretsiz Edin</button>
+            <div className='hidden md:block py-5 mb-2'>
+              <Link href="/ucretsiz-paket/ucretsiz-ilan-formu" className='bg-red-600 text-white font-semibold py-3 px-8 mx-2 rounded-lg shadow'>
+                  Ücretsiz Edin
+              </Link>
             </div>
 
             {/* Tab Menü */}
@@ -99,8 +102,10 @@ const UcretsizPaket = () => {
             </div>
 
             {/* Alt kısım (mobil buton) */}
-            <div className='md:hidden fixed left-0 right-0 bottom-0 py-4 flex justify-center items-center rounded-t-2xl bg-white shadow-[0_-2px_2px_rgba(0,0,0,0.1)]'>
-              <button className="bg-red-600 text-white font-semibold py-2 w-full mx-4 rounded-lg">Ücretsiz Edin</button>
+            <div className="md:hidden fixed left-0 right-0 bottom-0 py-4 flex justify-center items-center rounded-t-2xl bg-white shadow-[0_-2px_2px_rgba(0,0,0,0.1)]">
+              <Link href="/ucretsiz-paket/ucretsiz-ilan-formu" className='bg-red-600 text-white font-semibold py-2 w-full mx-4 rounded-lg text-center'>
+                  Ücretsiz Edin
+              </Link>
             </div>
           </div>
         </div>

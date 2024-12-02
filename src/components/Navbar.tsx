@@ -25,6 +25,7 @@ const Navbar = () => {
     '/ucretsiz-paket/ucretsiz-ilan-formu',
     '/destek-paket/destek-ilan-formu',
     '/uzman-paket/uzman-ilan-formu',
+    '/urunler/urun-one',
   ];
 
   // Eğer mevcut rota listede varsa navbar gizlenir

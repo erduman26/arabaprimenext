@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import MobileFilters from "./MobileFilters";
 import DesktopFilters from "./DesktopFilters";
@@ -31,9 +32,9 @@ const Urunler = () => {
             <span className="text-sm font-bold text-gray-500 line-through">₺140.00</span>
           </div>
           <div className="flex items-center mt-2 space-x-1 text-white">
-            <button className="text-base font-semibold bg-red-600 px-3 py-1 rounded-md w-full flex items-center justify-center">
+            <Link href="/urunler/urun-one" className="text-base font-semibold bg-red-600 px-3 py-1 rounded-md w-full flex items-center justify-center">
               Detay
-            </button>
+            </Link>
             <button className="flex items-center text-white bg-red-600 px-3 py-1 rounded-md">
               <HiOutlineShoppingBag className="w-6 h-6 ml-auto" style={{ strokeWidth: 1.9 }} />
             </button>

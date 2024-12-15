@@ -50,7 +50,7 @@ const UrunOne = () => {
 
             <div className="mx-2 mb-2 flex items-center space-x-4">
               <p className="text-base font-semibold bg-red-600 text-white py-1 px-2 rounded">%20</p>
-              <p className="text-xl font-bold">₺200.00</p>
+              <p className="text-xl font-bold text-gray-950">₺200.00</p>
               <span className="text-sm font-bold text-gray-500 line-through">₺160.00</span>
             </div>
 

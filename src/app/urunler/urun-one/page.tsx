@@ -1,6 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import Link from "next/link";
+
+import { Pagination } from 'swiper/modules';
 
 const UrunOne = () => {
   const [activeTab, setActiveTab] = useState<"aciklama" | "ozellikler">("aciklama");
@@ -11,12 +16,27 @@ const UrunOne = () => {
   const decreaseQuantity = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   return (
-    <div className="py-8 -mt-2 md:mt-0 pt-24 lg:pt-28 xl:pt-32 mb-8">
+    <div className="py-8 -mt-1.5 md:mt-0 pt-24 lg:pt-28 xl:pt-32 mb-8">
       <div className="mx-2 px-2 2xl:mx-24">
         <div className="flex flex-col md:flex-row md:items-start md:gap-8">
           {/* Görsel kısmı */}
-          <div className="rounded-lg shadow-lg bg-white md:w-2/4 lg:w-[477px] sm:flex sm:items-center sm:justify-center md:flex-none">
-            <img className="w-full h-full shadow-md rounded" src="/bulbenithree.jpg" alt="Product Image" />
+          <div className="bg-white md:w-2/4 lg:w-[477px] sm:flex sm:items-center sm:justify-center md:flex-none">
+            <Swiper
+              loop={true}
+              pagination={{
+                dynamicBullets: true,
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide><img src="/bulbenithree.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
+              <SwiperSlide><img src="/bulbenitwo.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
+              <SwiperSlide><img src="/bulbenione.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
+              <SwiperSlide><img src="/bulbenifour.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
+              {/* Pagination için yer tutucu */}
+              <div className="swiper-pagination"></div>
+            </Swiper>
           </div>
 
           <div className="w-full">
@@ -31,20 +51,21 @@ const UrunOne = () => {
             <div className="mx-2 mb-2 flex items-center space-x-4">
               <p className="text-base font-semibold bg-red-600 text-white py-1 px-2 rounded">%20</p>
               <p className="text-xl font-bold">₺200.00</p>
+              <span className="text-sm font-bold text-gray-500 line-through">₺160.00</span>
             </div>
 
             <div className="hidden md:flex items-center py-5 mb-2 mx-2">
               {/* Adet Değiştirme Butonları */}
-              <div className="flex items-center space-x-5 mr-10 bg-red-500 rounded-md">
+              <div className="flex items-center space-x-5 mr-10 bg-red-500 rounded-lg">
                 <button
-                  className="bg-red-600 text-white px-5 py-2 font-bold text-2xl rounded-l"
+                  className="bg-red-600 text-white w-14 py-2 font-bold text-2xl rounded-l-md"
                   onClick={decreaseQuantity}
                 >
                   -
                 </button>
                 <span className="text-lg font-bold text-white w-3 text-center">{quantity}</span>
                 <button
-                  className="bg-red-600 text-white px-5 py-2 font-bold text-2xl rounded-r"
+                  className="bg-red-600 text-white w-14 py-2 font-bold text-2xl rounded-r-md"
                   onClick={increaseQuantity}
                 >
                   +
@@ -97,14 +118,14 @@ const UrunOne = () => {
               {/* Adet Değiştirme Butonları */}
               <div className="flex items-center space-x-2 bg-red-500 rounded-md">
                 <button
-                  className="bg-red-600 text-white px-4 py-2 font-bold text-xl rounded-l"
+                  className="bg-red-600 text-white px-4 py-2 font-bold text-xl rounded-l-md"
                   onClick={decreaseQuantity}
                 >
                   -
                 </button>
                 <span className="text-center text-lg font-bold text-white w-7">{quantity}</span>
                 <button
-                  className="bg-red-600 text-white px-4 py-2 font-bold text-xl rounded-r"
+                  className="bg-red-600 text-white px-4 py-2 font-bold text-xl rounded-r-md"
                   onClick={increaseQuantity}
                 >
                   +

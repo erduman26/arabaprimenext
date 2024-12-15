@@ -5,3 +5,26 @@
 * {
   scrollbar-width: thin;
 }
+
+html {
+  background-color: white !important;
+}
+
+body {
+  background-color: white !important;
+}
+
+/* Aktif olmayan noktaların rengi */
+.swiper-pagination-bullet {
+  background-color: #ff9090 !important; /* Nokta rengini gri yapar */
+  opacity: 1 !important; /* Opaklık ayarı */
+  width: 10px !important;
+  height: 10px !important;
+}
+
+/* Aktif noktanın rengi */
+.swiper-pagination-bullet-active {
+  background-color: #ff0000 !important; /* Aktif nokta kırmızı olur */
+  width: 11px !important;
+  height: 11px !important;
+}

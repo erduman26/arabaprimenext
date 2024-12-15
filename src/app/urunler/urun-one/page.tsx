@@ -42,8 +42,8 @@ const UrunOne = () => {
           <div className="w-full">
             {/* Metin kısmı */}
             <div className="flex-1 mt-4 md:mt-0 mx-2">
-              <h1 className="text-lg font-bold text-red-500 dark:text-white">Özel Ürünler</h1> {/* Kategori */}
-              <h2 className="text-xl md:text-3xl font-bold text-gray-800 dark:text-white mb-3 md:mb-5">
+              <h1 className="text-lg font-bold text-red-500">Özel Ürünler</h1> {/* Kategori */}
+              <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-5">
                 Bul Beni QR Araç Cam Etiketi
               </h2>
             </div>

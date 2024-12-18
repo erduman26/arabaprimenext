@@ -1,11 +1,10 @@
 "use client";
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from "next/link";
-
-import { Pagination } from 'swiper/modules';
 
 const UrunOne = () => {
   const [activeTab, setActiveTab] = useState<"aciklama" | "ozellikler">("aciklama");
@@ -27,9 +26,10 @@ const UrunOne = () => {
                 dynamicBullets: true,
                 clickable: true,
               }}
+              speed={1000} // Geçiş hızını 1 saniye (1000ms) olarak ayarlar
               modules={[Pagination]}
               className="mySwiper"
-            >
+              >
               <SwiperSlide><img src="/bulbenithree.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
               <SwiperSlide><img src="/bulbenitwo.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>
               <SwiperSlide><img src="/bulbenione.jpg" className='rounded-lg shadow-lg' alt="" /></SwiperSlide>

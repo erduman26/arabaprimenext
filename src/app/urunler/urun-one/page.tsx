@@ -19,7 +19,7 @@ const UrunOne = () => {
       <div className="mx-2 px-2 2xl:mx-24">
         <div className="flex flex-col md:flex-row md:items-start md:gap-8">
           {/* Görsel kısmı */}
-          <div className="bg-white md:w-2/4 lg:w-[477px] sm:flex sm:items-center sm:justify-center md:flex-none">
+          <div className="bg-white md:w-2/4 lg:w-[477px] sm:flex sm:items-center sm:justify-center md:flex-none z-0">
             <Swiper
               loop={true}
               pagination={{
@@ -51,7 +51,7 @@ const UrunOne = () => {
             <div className="mx-2 mb-2 flex items-center space-x-4">
               <p className="text-base font-semibold bg-red-600 text-white py-1 px-2 rounded">%20</p>
               <p className="text-xl font-bold text-gray-950">₺200.00</p>
-              <span className="text-sm font-bold text-gray-500 line-through">₺160.00</span>
+              <span className="text-sm font-bold text-gray-500 line-through">₺240.00</span>
             </div>
 
             <div className="hidden md:flex items-center py-5 mb-2 mx-2">

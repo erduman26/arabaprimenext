@@ -12,6 +12,7 @@ const Footer = () => {
               <h4 className="text-base text-gray-800 font-bold mb-6">Arabaprime</h4>
               <ul className="text-sm transition-all duration-500 font-semibold">
                 <li className="mb-4"><a href="javascript:;" className="text-gray-600 hover:text-red-600 transition-all duration-500">Anasayfa</a></li>
+                <li className="mb-4"><a href="javascript:;" className="text-gray-600 hover:text-red-600 transition-all duration-500">Ürünler</a></li>
                 <li className="mb-4"><a href="javascript:;" className=" text-gray-600 hover:text-red-600 transition-all duration-500">Hakkımızda</a></li>
                 <li className="mb-4"><a href="javascript:;" className=" text-gray-600 hover:text-red-600 transition-all duration-500">Sepetim</a></li>
                 <li className="mb-4"><a href="javascript:;" className=" text-gray-600 hover:text-red-600 transition-all duration-500">Üye Girişi</a></li>

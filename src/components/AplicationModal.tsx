@@ -23,7 +23,7 @@ const AplicationModal: React.FC<AplicationModalProps> = ({ isOpen, onClose }) =>
           animate={{ y: '40%' }}
           exit={{ y: '100%' }}
           transition={{ type: 'spring', stiffness: 250, damping: 20 }}
-          className="fixed inset-0 bg-gray-50 border rounded-t-xl border-gray-300 z-10 overflow-y-auto"
+          className="fixed inset-0 bg-gray-50 border rounded-t-xl border-gray-300 z-0 overflow-y-auto"
         >
           <div className="h-2/4 px-4 overflow-y-auto">
             <div className="mt-6">
